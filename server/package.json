@@ -1,0 +1,16 @@
+{
+  "name": "scriptureapp",
+  "version": "1.0.0",
+  "description": "scripture study tool",
+  "main": "app.jg",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Douglas Kiel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4"
+  }
+}
