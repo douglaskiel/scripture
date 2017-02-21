@@ -6,8 +6,9 @@ exports.signup = function(req, res, next){
 	// 1. take request, get and store
 	var email = req.body.email;
 	var password = req.body.password;
-	// 2. Check if user email exist
-	User.findOne({ email:email }, function(err, existingUser){
+
+	// 2. Check if user email exist/"query of existance"
+	User.findOne({ email: email }, function(err, existingUser){
 		if(err) {
 			return next(err);
 		}// handle search error
@@ -20,7 +21,7 @@ exports.signup = function(req, res, next){
 		}// handles existing users
 	
 
-		// 3. Create user
+		// 3. Create new user if email does not exist
 		var user = new User({
 			email: email,
 			password: password
@@ -29,7 +30,7 @@ exports.signup = function(req, res, next){
 		// To save the record to the DB.
 		user.save(function(err){
 			if(err) { return next(err); }
-		// 4. Show response to user
+		// 4. Show response to user... indicating the user was created.
 		res.json({success:true});
 		});
 	});
