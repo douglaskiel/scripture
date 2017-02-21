@@ -1,4 +1,11 @@
 var User = require('../models/user');
+var jwt = require('jwt-simple');
+var config = require('../config');
+
+function createUserToken(user){
+	var timestamp = new Date().getTime();
+	return jwt.encode({ sub: user.id, iat: timestamp }, config.secret)
+}
 
 exports.signup = function(req, res, next){
 	// Test
@@ -33,6 +40,8 @@ exports.signup = function(req, res, next){
 		// To save the record to the DB.
 		user.save(function(err){
 			if(err) { return next(err); }
+			// this is the json web token to help security of the userName
+			res.json({ token: createUserToken(user)});
 		// 4. Show response to user... indicating the user was created.
 		res.json({success:true});
 		});
