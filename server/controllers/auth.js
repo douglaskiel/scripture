@@ -21,7 +21,7 @@ exports.signup = function(req, res, next){
 	var password = req.body.password;
 
 	if ( !email || !password) {
-		return res.status(418).send({error: 'You must probide email and pw.'});
+		return res.status(418).send({error: 'You must provide email and pw.'});
 	}
 
 
