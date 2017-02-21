@@ -1,6 +1,7 @@
 var User = require('../models/user');
 var jwt = require('jwt-simple');
 var config = require('../config');
+ 
 
 function createUserToken(user){
 	var timestamp = new Date().getTime();
