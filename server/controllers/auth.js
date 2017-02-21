@@ -40,10 +40,10 @@ exports.signup = function(req, res, next){
 		// To save the record to the DB.
 		user.save(function(err){
 			if(err) { return next(err); }
+			// 4. Show response to user... indicating the user was created.
 			// this is the json web token to help security of the userName
 			res.json({ token: createUserToken(user)});
-		// 4. Show response to user... indicating the user was created.
-		res.json({success:true});
+
 		});
 	});
 }
