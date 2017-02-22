@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Douglas Kiel",
   "license": "ISC",
@@ -20,9 +21,9 @@
     "babel-preset-stage-1": "^6.1.18",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-redux": "^4.0.0",
+    "react-redux": "^4.4.6",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4",
+    "redux": "^3.6.0",
     "redux-form": "^5.0.1"
   }
 }
