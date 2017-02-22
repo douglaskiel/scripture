@@ -4,6 +4,7 @@ import JSXIntro from './1_JSXIntro';
 import ComponentsIntro from './2_ComponentsIntro';
 import PropsIntro from './3_PropsIntro';
 import StateIntro from './4_StateIntro';
+import ChildComponentsIntro from './5_ChildComponentsIntro';
 
 
 export default class App extends Component {
@@ -15,6 +16,7 @@ export default class App extends Component {
 				<ComponentsIntro />
 				<PropsIntro name="TobyMac" title="Ignition" />
 				<StateIntro />
+				<ChildComponentsIntro />
 			</div>
 		);
 	}
