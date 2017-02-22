@@ -1,6 +1,6 @@
 import React from 'react';
 
-class JSXIntro extends react.component {
+class JSXIntro extends React.Component {
 	render () {
 		return (
 			<div>
