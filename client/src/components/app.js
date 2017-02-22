@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import JSXIntro from './1_JSXIntro';
-
+import ComponentsIntro from './2_ComponentsIntro';
 
 
 
@@ -10,7 +10,8 @@ export default class App extends Component {
 		return (
 			<div>
 				<h1>React Intro</h1>
-				<JSXIntro/>
+				<JSXIntro />
+				<ComponentsIntro />
 			</div>
 		);
 	}
